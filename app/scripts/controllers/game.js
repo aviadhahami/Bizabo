@@ -15,7 +15,7 @@ angular.module('bizzaboApp')
 			if(!userData.isPlaying()){
 				$location.path('/');
 			}else{
-				$scope.isPlaying = true;
+				$scope.isPlaying = false;
 			}
 			var albums = [];
 			var attempt;

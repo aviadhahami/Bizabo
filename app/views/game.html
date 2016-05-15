@@ -47,6 +47,15 @@
     </div>
 </div>
 
-<div ng-if="!isPlaying">
-    done
+<div class="results-container" ng-if="!isPlaying">
+    <div class="game-results">
+        <p ng-if="score === 0">Oh.. unpleasing... scored {{score}}. Try again.</p>
+        <p  ng-if="score > 0 && score <=10">Nicely done! you've scored {{score}}</p>
+        <p ng-if="score > 10 && score <=20">Wow! pretty good! you've scored {{score}}!</p>
+        <p ng-if="score > 20">CRAZY! you've scored {{score}}!!!</p>
+        <div>
+            <button>Home icon</button>
+            <button>again</button>
+        </div>
+    </div>
 </div>

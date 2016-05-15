@@ -32,3 +32,29 @@
 .game-score-container{
     font-size: 3em;
 }
+
+
+
+.results-container{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background-color: #3c763d;
+}
+.game-results{
+    margin: 20% auto auto;
+    width:50%;
+    min-height:200px;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    border: 2px solid white;
+}
+.game-results p{
+    line-height: 2em;
+}
+.game-results button{
+    background-color: transparent;
+    border: none;
+    outline:none;
+}
