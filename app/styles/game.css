@@ -5,7 +5,9 @@
     overflow: hidden;
 }
 .game-title{
-    font-size: 3em;
+    font-family: 'Lobster', cursive;
+    font-size: 5em;
+    color: #484848;
 }
 .game-question{
     border:2px solid black;
