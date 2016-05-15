@@ -35,7 +35,8 @@ angular.module('bizzaboApp')
 		};
 		return{
 			userExists: function(){
-				return !!localStorage.getItem('bgu');
+				console.log(localStorage.getItem('bgu'),localStorage.getItem('bgu') !== null);
+				return localStorage.getItem('bgu') !== null;
 			},
 			initUser: function(){
 				if(!this.userExists()){
@@ -46,6 +47,7 @@ angular.module('bizzaboApp')
 				}else{
 					user = JSON.parse(localStorage.getItem('bgu'));
 					console.log('loaded user from LS')
+
 				}
 			},
 			startGame: function(){
@@ -55,7 +57,7 @@ angular.module('bizzaboApp')
 				return user.scores;
 			},
 			getHighScore: function(){
-				return  Math.max.apply( Math, this.getScores());
+				return  Math.max.apply(Math, this.getScores());
 			},
 			isPlaying: function(){
 				return user.isPlaying;

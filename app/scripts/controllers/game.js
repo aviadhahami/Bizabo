@@ -19,6 +19,7 @@ angular.module('bizzaboApp')
 			var attempt;
 			var artist;
 			var round;
+			$scope.score =0;
 			$scope.inputField ='';
 
 			var initGame = function(){
