@@ -16,13 +16,12 @@ angular.module('bizzaboApp')
 		$scope.inputField ='';
 
 		var initGame = function(){
-			round=1;
+			round = 0;
 			initRound(round);
 			$scope.score = 0;
 		};
 		
 		var exposeAlbumToScope = function (index) {
-
 			console.log(albums);
 			console.log('pushing with index',index);
 			$scope.albums.push(albums[index]);
@@ -30,11 +29,14 @@ angular.module('bizzaboApp')
 
 		var endGame = function () {
 			// TODO: on game end
+			console.log('DONE!')
 		};
+
 		var initRound = function(){
 
+			round++;
 			// Check for game end
-			if(round === 4){
+			if(round === 6){
 				endGame();
 				return;
 			}
@@ -54,6 +56,7 @@ angular.module('bizzaboApp')
 				console.log(err);
 			});
 		};
+
 		var updateScore = function () {
 			switch (attempt){
 				case 0:{
@@ -75,14 +78,17 @@ angular.module('bizzaboApp')
 				}
 			}
 		};
+
 		var performAttempt = function(guess){
 			if(guess === artist){
 				updateScore();
+				initRound();
 			}else{
 				attempt++;
 				console.log('attempt',attempt);
 				if(attempt == 3){
 					// Means we're done
+					initRound();
 				}else{
 					exposeAlbumToScope(attempt);
 				}
@@ -93,6 +99,5 @@ angular.module('bizzaboApp')
 			if($scope.inputField.replace(/ /g,'').length == 0) return;
 			performAttempt($scope.inputField);
 		};
-
 		initGame();
 	}]);
