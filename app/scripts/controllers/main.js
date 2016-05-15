@@ -9,6 +9,11 @@
  */
 angular.module('bizzaboApp')
 	.controller('MainCtrl',['$scope','userData','$location' ,function ($scope, userData, $location) {
+		$scope.video= {
+			id:'JKw4cHvyoWY',
+			mute: true
+		};
+		
 		if(userData.userExists()){
 			console.log('user exists')
 			userData.initUser();
