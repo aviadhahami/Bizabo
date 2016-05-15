@@ -40,8 +40,17 @@ angular.module('bizzaboApp')
 				var def = $q.defer();
 				this.getAlbums(artist).then(function(res){
 					var three = [];
+					var results = [-1,-1,-1];
+					var randNum;
 					for(var i=0;i<3;i++){
-						three.push(res[Math.floor(Math.random() * res.length)]);
+						randNum = results[i];
+
+						// Making sure no dups
+						while(randNum == results[i]){
+							randNum = Math.floor(Math.random() * res.length);
+							console.log(randNum);
+						}
+						three.push(res[randNum]);
 					}
 					def.resolve(three);
 				},function(err){
