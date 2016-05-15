@@ -10,17 +10,11 @@
     <div class="row" style="background-color: #4cae4c">
         <div class="col-md-5" style="background-color: #2aabd2">
             <div class="round-indicator">
-                <p>Round 1:</p>
+                <p>Round {{round}}:</p>
             </div>
             <div class="game-questions">
-                <div class="game-question">
-                    <p>q1</p>
-                </div>
-                <div class="game-question">
-                    <p>q2</p>
-                </div>
-                <div class="game-question">
-                    <p>q3</p>
+                <div class="game-question" ng-repeat="q in currentQuestions">
+                    <p ng-bind="q"></p>
                 </div>
             </div>
         </div>

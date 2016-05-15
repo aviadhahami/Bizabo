@@ -30,11 +30,24 @@ angular.module('bizzaboApp')
 				};
 				var jsonpURL = injectParamsToUrl(['term='+artist.replace(/ /g,'+'),queryLimit,entityType]);
 				$http.jsonp(jsonpURL,jsonpParams).then(function(res){
-					deferred.resolve(res);
+					deferred.resolve(res.data.results);
 				},function(err){
 					deferred.reject(err);
 				});
 				return deferred.promise;
+			},
+			getThreeAlbums: function(artist){
+				var def = $q.defer();
+				this.getAlbums(artist).then(function(res){
+					var three = [];
+					for(var i=0;i<3;i++){
+						three.push(res[Math.floor(Math.random() * res.length)]);
+					}
+					def.resolve(three);
+				},function(err){
+					def.reject(err);
+				});
+				return def;
 			}
 		}
 	}]);

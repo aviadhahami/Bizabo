@@ -9,21 +9,23 @@
  */
 angular.module('bizzaboApp')
 	.controller('GameCtrl',['$scope', 'iTunesApiService','ArtistsService', function ($scope, iTunesApiService,ArtistsService) {
-		$scope.albums = [];
-		$scope.round = 0;
-		var init = function(){
-			$scope.round = 1;
-			initRound();
+
+
+		var initGame = function(){
+			initRound(1);
 		};
-		var initRound = function(){
+
+		var initRound = function(roundNum){
+			$scope.albums = [];
+			$scope.round = roundNum;
+			$scope.currentQuestions = [];
 			$scope.loading = true;
-			iTunesApiService.getAlbums(ArtistsService.getRandomArtist()).then(function(res){
-				console.log(res.data.results);
-				$scope.loading = false;
-			},function(err){
-				console.log(err);
-				alert('ERROR!');
-			})
 		};
-		init();
+
+		initGame();
+		iTunesApiService.getThreeAlbums(ArtistsService.getRandomArtist()).then(function(res){
+			console.log(res);
+		},function(err){
+			console.log(err);
+		})
 	}]);
