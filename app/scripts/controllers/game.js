@@ -14,6 +14,8 @@ angular.module('bizzaboApp')
 			// Kick intruders out if didn't click
 			if(!userData.isPlaying()){
 				$location.path('/');
+			}else{
+				$scope.isPlaying = true;
 			}
 			var albums = [];
 			var attempt;
@@ -40,7 +42,8 @@ angular.module('bizzaboApp')
 				userData.endGame();
 
 				// Show modal on end
-				$location.path('/');
+				// $location.path('/');
+				$scope.isPlaying = false;
 			};
 
 			var initRound = function(){
@@ -52,8 +55,7 @@ angular.module('bizzaboApp')
 					return;
 				}
 
-				attempt=0;
-				$scope.attemp = attempt;
+				$scope.attempt = attempt = 0;
 				albums = [];
 				$scope.albums = [];
 				$scope.round = round;

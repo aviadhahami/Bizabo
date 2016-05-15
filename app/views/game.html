@@ -1,4 +1,4 @@
-<div class="game-container">
+<div class="game-container" ng-show="isPlaying">
     <div class="row" style="background-color: #0b97c4">
         <div class="col-md-2">
 
@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="input-box">
                         <input type="text" class="game-input" ng-model="inputField" ng-keydown="$event.which === 13 && guess()"/>
-                        <button class="form-submit" ng-click="guess()" ng-disabled="!(albums.length>0)">Submit</button>
+                        <button class="form-submit" ng-click="guess()">Submit</button>
                     </div>
                 </div>
                 <div ng-if="attempt === 2">
@@ -45,4 +45,8 @@
             <p>Your Total Score: {{score}}</p>
         </div>
     </div>
+</div>
+
+<div ng-if="!isPlaying">
+    done
 </div>
