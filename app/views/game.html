@@ -1,1 +1,48 @@
-<p>This is the game view.</p>
+<div class="game-container">
+    <div class="row" style="background-color: #0b97c4">
+        <div class="game-title">
+            <p>Guess The Artist</p>
+        </div>
+    </div>
+    <div class="row" style="background-color: #4cae4c">
+        <div class="col-md-5" style="background-color: #2aabd2">
+            <div class="round-indicator">
+                <p>Round 1:</p>
+            </div>
+            <div class="game-questions">
+                <div class="game-question">
+                    <p>q1</p>
+                </div>
+                <div class="game-question">
+                    <p>q2</p>
+                </div>
+                <div class="game-question">
+                    <p>q3</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7" style="background-color: #8a4182">
+            <div class="game-submission-container">
+                <div class="row">
+                    <p>For 5 points</p>
+                    <p>Who's the artist?(enter full name):</p>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <input type="text" class="game-input"/>
+                        <button class="form-submit">Submit</button>
+                    </div>
+                </div>
+                <div>
+                    hint:
+                    <img ng-src="" alt="" class="album-hint">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="game-score-container">
+            <p>Your Total Score: 5</p>
+        </div>
+    </div>
+</div>

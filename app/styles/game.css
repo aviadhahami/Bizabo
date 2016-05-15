@@ -1,0 +1,33 @@
+.game-container{
+    background-color: fuchsia;
+    padding: 3%;
+}
+.game-question{
+    border:2px solid black;
+    width:100%;
+    min-height: 100px;
+    height:100%;
+    margin: 3% auto auto;
+}
+.round-indicator{
+    font-size: 2em;
+}
+.game-question p{
+    font-size: 2em;
+}
+.album-hint{
+    width:150px;
+    height:150px;
+}
+.game-input{
+    border:none;
+    background: transparent;
+    color:white;
+    outline: none;
+    font-size: 2em;
+}
+.game-score-container{
+    width:100%;
+    text-align: center;
+    font-size: 3em;
+}
