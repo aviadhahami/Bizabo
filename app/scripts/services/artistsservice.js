@@ -39,5 +39,5 @@ angular.module('bizzaboApp')
 			getRandomArtist: function(){
 				return artists[Math.floor(Math.random() * artists.length)];
 			}
-		}
+		};
 	});

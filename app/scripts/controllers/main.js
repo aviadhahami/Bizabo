@@ -8,10 +8,10 @@
  * Controller of the bizzaboApp
  */
 angular.module('bizzaboApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+	.controller('MainCtrl',['$scope','userData','$location' ,function ($scope, userData, $location) {
+		$scope.startGame = function(){
+			userData.initNewUser();
+			userData.startGame();
+			$location.path('/game');
+		};
+	}]);
