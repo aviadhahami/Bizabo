@@ -24,10 +24,25 @@ angular.module('bizzaboApp')
 			return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
 				s4() + '-' + s4() + s4() + s4();
 		};
+
+		var createUser = function() {
+			user.id = generateUserID();
+			user.isPlaying = false;
+		};
+
+		var storeUserInStorage = function () {
+			localStorage['bgu'] = JSON.stringify(user);
+		};
 		return{
 			initNewUser: function(){
-				user.id = generateUserID();
-				user.isPlaying = false;
+				var userData = localStorage.getItem('bgu');
+				if(!userData){
+					// Means no record was found
+					createUser();
+					storeUserInStorage();
+				}else{
+					user = JSON.parse(userData);
+				}
 			},
 			startGame: function(){
 				user.isPlaying = true;
