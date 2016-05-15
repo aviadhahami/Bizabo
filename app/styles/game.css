@@ -2,6 +2,9 @@
     background-color: fuchsia;
     padding: 3%;
 }
+.game-title{
+    font-size: 3em;
+}
 .game-question{
     border:2px solid black;
     width:100%;
@@ -27,7 +30,5 @@
     font-size: 2em;
 }
 .game-score-container{
-    width:100%;
-    text-align: center;
     font-size: 3em;
 }
