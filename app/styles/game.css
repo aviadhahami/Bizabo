@@ -39,7 +39,8 @@
     width:100vw;
     height:100vh;
     overflow:hidden;
-    background-color: #3c763d;
+    background-image: url("../images/end-bg.jpg");
+
 }
 .game-results{
     margin: 20% auto auto;
@@ -57,4 +58,7 @@
     background-color: transparent;
     border: none;
     outline:none;
+}
+.button-inner-container{
+    font-size: medium;
 }
