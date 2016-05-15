@@ -6,13 +6,19 @@
 }
 .intro-frame{
     width:50%;
-    margin: auto;
-    margin-top: 10%;
+    height: 40vh;
+    margin: 10% auto auto;
     border: 2px solid white;
 }
 .intro-title-container p{
     font-family: 'Lobster', cursive;
-    margin: auto;
+    margin: 10% auto auto;
     text-align: center;
     font-size: 5em;
+}
+.intro-button-container button{
+    display: block;
+    width:40%;
+    font-size: 2em;
+    margin: 20px auto 20px;
 }
