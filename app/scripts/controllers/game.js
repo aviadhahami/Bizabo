@@ -42,6 +42,7 @@ angular.module('bizzaboApp')
 			}
 
 			attempt=0;
+			$scope.attemp = attempt;
 			albums = [];
 			$scope.albums = [];
 			$scope.round = round;
@@ -85,6 +86,7 @@ angular.module('bizzaboApp')
 				initRound();
 			}else{
 				attempt++;
+				$scope.attempt = attempt;
 				console.log('attempt',attempt);
 				if(attempt == 3){
 					// Means we're done

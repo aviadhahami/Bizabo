@@ -26,13 +26,13 @@
                 </div>
                 <div class="row">
                     <div class="input-box">
-                        <input type="text" class="game-input" ng-model="inputField"   ng-keydown="$event.which === 13 && guess()"/>
+                        <input type="text" class="game-input" ng-model="inputField" ng-keydown="$event.which === 13 && guess()"/>
                         <button class="form-submit" ng-click="guess()">Submit</button>
                     </div>
                 </div>
-                <div>
+                <div ng-if="attempt == 2">
                     hint:
-                    <img ng-src="" alt="" class="album-hint">
+                    <img ng-src="{{albums[2].artworkUrl100}}" alt="" class="album-hint">
                 </div>
             </div>
         </div>
