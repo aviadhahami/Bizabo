@@ -15,7 +15,7 @@ angular.module('bizzaboApp')
 			if(!userData.isPlaying()){
 				$location.path('/');
 			}else{
-				$scope.isPlaying = false;
+				$scope.isPlaying = true;
 			}
 			var albums = [];
 			var attempt;
@@ -28,6 +28,7 @@ angular.module('bizzaboApp')
 				round = 0;
 				initRound(round);
 				$scope.score = 0;
+				$scope.isPlaying = true;
 			};
 
 			var exposeAlbumToScope = function (index) {
@@ -119,6 +120,10 @@ angular.module('bizzaboApp')
 			$scope.guess = function(){
 				if($scope.inputField.replace(/ /g,'').length == 0) return;
 				performAttempt($scope.inputField);
+			};
+			$scope.initGame = initGame;
+			$scope.redirect = function(loc){
+				$location.path(loc);
 			};
 			initGame();
 		}]);

@@ -54,13 +54,13 @@
         <p ng-if="score > 10 && score <=20">Wow! pretty good! you've scored {{score}}!</p>
         <p ng-if="score > 20">CRAZY! you've scored {{score}}!!!</p>
         <div>
-            <button>
+            <button ng-click="redirect('/')">
                 <div class="button-inner-container">
                     <i class="fa fa-home fa-2x"></i>
                     <p>Home</p>
                 </div>
             </button>
-            <button>
+            <button ng-click="initGame()">
                 <div class="button-inner-container">
                     <i class="fa fa-repeat fa-2x"></i>
                     <p>again</p>
