@@ -38,6 +38,8 @@ angular.module('bizzaboApp')
 				console.log('DONE!')
 				userData.pushScore($scope.score);
 				userData.endGame();
+
+				// Show modal on end
 			};
 
 			var initRound = function(){
