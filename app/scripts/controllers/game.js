@@ -40,6 +40,7 @@ angular.module('bizzaboApp')
 				userData.endGame();
 
 				// Show modal on end
+				$location.path('/');
 			};
 
 			var initRound = function(){
@@ -117,7 +118,5 @@ angular.module('bizzaboApp')
 				if($scope.inputField.replace(/ /g,'').length == 0) return;
 				performAttempt($scope.inputField);
 			};
-			endGame();
-
 			initGame();
 		}]);

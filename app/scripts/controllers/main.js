@@ -9,11 +9,11 @@
  */
 angular.module('bizzaboApp')
 	.controller('MainCtrl',['$scope','userData','$location' ,function ($scope, userData, $location) {
-		// if(userData.userExists()){
-		// 	console.log('user exists')
-		// 	userData.initUser();
-		// 	$scope.highScore = userData.getHighScore();
-		// }
+		if(userData.userExists()){
+			console.log('user exists')
+			userData.initUser();
+			$scope.highScore = userData.getHighScore();
+		}
 
 		$scope.startGame = function(){
 			userData.initUser();
