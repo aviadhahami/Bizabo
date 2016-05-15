@@ -8,5 +8,8 @@
         <div class="intro-button-container">
             <button ng-click="startGame()">Start Game</button>
         </div>
+        <div ng-if="highScore" class="user-highscore">
+           <p>Highest score: {{highScore}}</p>
+        </div>
     </div>
 </div>

@@ -34,19 +34,28 @@ angular.module('bizzaboApp')
 			localStorage['bgu'] = JSON.stringify(user);
 		};
 		return{
+			userExists: function(){
+				return !!localStorage.getItem('bgu');
+			},
 			initUser: function(){
-				var userData = localStorage.getItem('bgu');
-				if(!userData){
+				if(!this.userExists()){
+					console.log('making user')
 					// Means no record was found
 					createUser();
 					storeUserInStorage();
 				}else{
-					user = JSON.parse(userData);
+					user = JSON.parse(localStorage.getItem('bgu'));
 					console.log('loaded user from LS')
 				}
 			},
 			startGame: function(){
 				user.isPlaying = true;
+			},
+			getScores: function(){
+				return user.scores;
+			},
+			getHighScore: function(){
+				return  Math.max.apply( Math, this.getScores());
 			},
 			isPlaying: function(){
 				return user.isPlaying;
