@@ -34,7 +34,7 @@ angular.module('bizzaboApp')
 			localStorage['bgu'] = JSON.stringify(user);
 		};
 		return{
-			initNewUser: function(){
+			initUser: function(){
 				var userData = localStorage.getItem('bgu');
 				if(!userData){
 					// Means no record was found

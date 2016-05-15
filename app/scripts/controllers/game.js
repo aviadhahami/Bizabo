@@ -58,6 +58,8 @@ angular.module('bizzaboApp')
 				$scope.round = round;
 				$scope.currentQuestions = [];
 				$scope.loading = true;
+				cleanInput();
+				
 				artist = ArtistsService.getRandomArtist();
 				iTunesApiService.getThreeAlbums(artist).then(function(res){
 					albums = res;
