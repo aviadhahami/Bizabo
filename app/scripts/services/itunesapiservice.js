@@ -47,7 +47,8 @@ angular.module('bizzaboApp')
 				},function(err){
 					def.reject(err);
 				});
-				return def;
+				return def.promise;
 			}
+
 		}
 	}]);
