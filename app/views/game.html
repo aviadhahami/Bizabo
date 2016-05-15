@@ -26,7 +26,7 @@
                 </div>
                 <div class="row">
                     <div class="input-box">
-                        <input type="text" class="game-input" ng-model="inputField"/>
+                        <input type="text" class="game-input" ng-model="inputField"   ng-keydown="$event.which === 13 && guess()"/>
                         <button class="form-submit" ng-click="guess()">Submit</button>
                     </div>
                 </div>
