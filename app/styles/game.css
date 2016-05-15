@@ -36,7 +36,9 @@
 .game-score-container{
     font-size: 3em;
 }
-
+.pane{
+    min-height: 50vh;
+}
 
 
 .results-container{
