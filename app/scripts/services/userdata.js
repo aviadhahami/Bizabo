@@ -42,6 +42,7 @@ angular.module('bizzaboApp')
 					storeUserInStorage();
 				}else{
 					user = JSON.parse(userData);
+					console.log('loaded user from LS')
 				}
 			},
 			startGame: function(){
@@ -55,6 +56,7 @@ angular.module('bizzaboApp')
 			},
 			endGame : function(){
 				user.isPlaying = false;
+				storeUserInStorage();
 			}
 
 		};
