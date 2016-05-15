@@ -35,19 +35,15 @@ angular.module('bizzaboApp')
 		};
 		return{
 			userExists: function(){
-				console.log(localStorage.getItem('bgu'),localStorage.getItem('bgu') !== null);
 				return localStorage.getItem('bgu') !== null;
 			},
 			initUser: function(){
 				if(!this.userExists()){
-					console.log('making user')
 					// Means no record was found
 					createUser();
 					storeUserInStorage();
 				}else{
 					user = JSON.parse(localStorage.getItem('bgu'));
-					console.log('loaded user from LS')
-
 				}
 			},
 			startGame: function(){
@@ -57,7 +53,7 @@ angular.module('bizzaboApp')
 				return user.scores;
 			},
 			getHighScore: function(){
-				return  Math.max.apply(Math, this.getScores());
+				return  this.getScores().length===0 ? 0 :Math.max.apply(0, this.getScores());
 			},
 			isPlaying: function(){
 				return user.isPlaying;
