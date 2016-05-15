@@ -15,7 +15,7 @@ angular.module('bizzaboApp')
 			'AFI',
 			'The Angelcy',
 			'Chance the Rapper',
-			'The Weekend',
+			'Paramore',
 			'The Fugees',
 			'Erykah Badu',
 			'Chet Faker',
