@@ -35,7 +35,6 @@ angular.module('bizzaboApp')
 
 			var endGame = function () {
 				// TODO: on game end
-				console.log('DONE!')
 				userData.pushScore($scope.score);
 				userData.endGame();
 
@@ -59,7 +58,7 @@ angular.module('bizzaboApp')
 				$scope.currentQuestions = [];
 				$scope.loading = true;
 				cleanInput();
-				
+
 				artist = ArtistsService.getRandomArtist();
 				iTunesApiService.getThreeAlbums(artist).then(function(res){
 					albums = res;
@@ -117,5 +116,7 @@ angular.module('bizzaboApp')
 				if($scope.inputField.replace(/ /g,'').length == 0) return;
 				performAttempt($scope.inputField);
 			};
+			endGame();
+
 			initGame();
 		}]);
