@@ -13,7 +13,7 @@
                 <p>Round {{round}}:</p>
             </div>
             <div class="game-questions">
-                <div class="game-question" ng-repeat="album in albums track by index">
+                <div class="game-question" ng-repeat="album in albums track by $index">
                     <p ng-bind="album.collectionName"></p>
                 </div>
             </div>
