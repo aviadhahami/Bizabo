@@ -10,9 +10,8 @@
 angular.module('bizzaboApp')
 	.service('iTunesApiService',['$q', '$http', function ($q, $http) {
 		var baseURL = 'http://itunes.apple.com/search?';
-		// ?term=jack+johnson&entity=album&limit=50
-		var queryLimit = 'limit=50';
-		var entityType = 'entity=album';
+		const queryLimit = 'limit=50';
+		const entityType = 'entity=album';
 		var injectParamsToUrl = function (paramsArr) {
 			var url = baseURL;
 			paramsArr.forEach(function(param){
@@ -26,10 +25,10 @@ angular.module('bizzaboApp')
 				var deferred = $q.defer();
 				var jsonpParams ={
 					params: {
-						'callback': 'JSON_CALLBACK'
+						'callback': 'JSON_CALLBACK' // As defined by the docs
 					}
 				};
-				var jsonpURL =  injectParamsToUrl(['term='+artist.replace(/ /g,'+'),queryLimit,entityType]);
+				var jsonpURL = injectParamsToUrl(['term='+artist.replace(/ /g,'+'),queryLimit,entityType]);
 				$http.jsonp(jsonpURL,jsonpParams).then(function(res){
 					deferred.resolve(res);
 				},function(err){
