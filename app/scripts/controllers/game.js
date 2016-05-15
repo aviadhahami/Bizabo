@@ -8,10 +8,11 @@
  * Controller of the bizzaboApp
  */
 angular.module('bizzaboApp')
-  .controller('GameCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+	.controller('GameCtrl',['iTunesApiService','ArtistsService', function (iTunesApiService,ArtistsService) {
+		var artist = ArtistsService.getRandomArtist();
+		iTunesApiService.getAlbums(artist).then(function(res){
+			console.log(res)
+		},function(err){
+			console.log(err)
+		})
+	}]);
