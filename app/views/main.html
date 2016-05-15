@@ -1,5 +1,5 @@
 <div class="intro-container">
-    <video-bg video-id="video.id" mute="video.mute"></video-bg>
+    <video-bg video-id="video.id" mute="video.mute" ratio="video.ratio" ></video-bg>
 
     <div class="intro-frame">
         <div class="intro-title-container">
@@ -8,10 +8,15 @@
             </p>
         </div>
         <div class="intro-button-container">
-            <button ng-click="startGame()">Start Game</button>
+            <button ng-click="startGame()">
+                <div class="intro-inner-button-container">
+                    <i class="fa fa-play-circle fa-4x" aria-hidden="true"></i>
+                    <p>Play Now!</p>
+                </div>
+            </button>
         </div>
         <div ng-if="highScore" class="user-highscore">
-           <p>Highest score: {{highScore}}</p>
+            <p>Highest score: {{highScore}}</p>
         </div>
     </div>
 </div>
