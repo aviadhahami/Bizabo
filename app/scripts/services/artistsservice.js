@@ -16,7 +16,7 @@ angular.module('bizzaboApp')
 			'The Angelcy',
 			'Chance the Rapper',
 			'Paramore',
-			'The Fugees',
+			'Fugees',
 			'Erykah Badu',
 			'Chet Faker',
 			'Alt-J',
