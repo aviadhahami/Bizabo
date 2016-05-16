@@ -72,7 +72,7 @@
     transition: all ease .3s;
 }
 .game-input:focus, .game-input:hover{
-    border-bottom: 1px solid #484848;
+    border-bottom: 2px solid #00b3ee;
 }
 .form-submit{
     line-height: 3;
@@ -84,9 +84,10 @@
     background-color: transparent;
     outline: none;
     transition: all ease .3s;
+    font-size: 1.1em;
 }
 .form-submit:hover{
-    color:white;
+    color:#00b3ee;
 }
 .game-score-container{
     font-size: 3em;
