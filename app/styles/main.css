@@ -3,6 +3,7 @@
     height: 100vh;
     overflow-x: hidden;
     background-color: #122b40;
+    font-family: 'Roboto', sans-serif;
 }
 .intro-frame{
     width:100%;
