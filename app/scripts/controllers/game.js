@@ -32,8 +32,6 @@ angular.module('bizzaboApp')
 			};
 
 			var exposeAlbumToScope = function (index) {
-				console.log(albums);
-				console.log('pushing with index',index);
 				$scope.albums.push(albums[index]);
 			};
 
@@ -107,7 +105,6 @@ angular.module('bizzaboApp')
 				}else{
 					attempt++;
 					$scope.attempt = attempt;
-					console.log('attempt',attempt);
 					if(attempt == 3){
 						// Means we're done
 						initRound();
