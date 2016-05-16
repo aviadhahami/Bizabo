@@ -38,7 +38,7 @@
     margin-top: 15%;
     text-align: center;
     font-weight: 100;
-    color: rgba(255,255,255,0.8);
+    color: #00b3ee;
     font-family: 'Roboto', sans-serif;
 }
 .game-submission-container{
@@ -95,7 +95,16 @@
 .pane{
     min-height: 50vh;
 }
+.hint-container{
 
+}
+.hint-container p{
+    padding: 0;
+    margin: 0;
+}
+
+
+/*RESULTS*/
 
 .results-container{
     width:100vw;

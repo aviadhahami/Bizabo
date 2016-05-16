@@ -29,8 +29,8 @@
                     <input type="text" class="game-input" ng-model="inputField" ng-keydown="$event.which === 13 && guess()"/>
                     <button class="form-submit" ng-click="guess()">Submit</button>
                 </div>
-                <div ng-if="attempt === 2">
-                    hint:
+                <div class="hint-container" ng-if="attempt === 2">
+                    <p>hint:</p>
                     <img ng-src="{{albums[2].artworkUrl100}}" alt="" class="album-hint">
                 </div>
             </div>
