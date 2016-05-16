@@ -21,7 +21,6 @@ angular.module('bizzaboApp')
 		};
 		return {
 			getAlbums: function(artist){
-				console.log('artis',typeof artist);
 				var deferred = $q.defer();
 				var jsonpParams ={
 					params: {
@@ -48,7 +47,6 @@ angular.module('bizzaboApp')
 						// Making sure no dups
 						while(randNum == results[i]){
 							randNum = Math.floor(Math.random() * res.length);
-							console.log(randNum);
 						}
 						three.push(res[randNum]);
 					}
