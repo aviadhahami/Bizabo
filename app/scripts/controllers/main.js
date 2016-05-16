@@ -16,7 +16,6 @@ angular.module('bizzaboApp')
 		};
 
 		if(userData.userExists()){
-			console.log('user exists')
 			userData.initUser();
 			$scope.highScore = userData.getHighScore();
 		}
