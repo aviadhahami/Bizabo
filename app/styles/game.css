@@ -29,6 +29,9 @@
     color: rgba(255,255,255,0.8);
     font-family: 'Roboto', sans-serif;
 }
+.game-question{
+    line-height: 3;
+}
 .game-question p{
     font-size: 2em;
 }
