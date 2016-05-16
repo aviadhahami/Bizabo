@@ -122,6 +122,7 @@ angular.module('bizzaboApp')
 
 			$scope.guess = function(){
 				if($scope.inputField.replace(/ /g,'').length == 0) return;
+				if($scope.loading) return;
 				performAttempt($scope.inputField);
 			};
 			$scope.initGame = initGame;
