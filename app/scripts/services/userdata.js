@@ -35,7 +35,8 @@ angular.module('bizzaboApp')
 		};
 		return{
 			userExists: function(){
-				return localStorage.getItem('bgu') !== null;
+				// Adding check for localStorage cause apparently fucking Edge doesn't support it
+				return !!localStorage ? localStorage.getItem('bgu') !== null : false;
 			},
 			initUser: function(){
 				if(!this.userExists()){
