@@ -1,8 +1,10 @@
 .game-container{
     background-color: #FDFDFD;
+    color: #484848;
     padding: 5% 3% 3%;
     height: 100vh;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 .game-title{
     font-family: 'Lobster', cursive;
@@ -10,11 +12,20 @@
     color: #484848;
 }
 .game-question{
-    border:2px solid black;
-    width:100%;
+    /*border:2px solid black;*/
+    /*width:90%;*/
     min-height: 100px;
     height:100%;
+    border-radius: 5px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.5);
+    background-color: #00b3ee;
     margin: 3% auto auto;
+    line-height: 3;
+}
+.game-question p{
+    font-size: 2em;
+    color: #FFF;
+    margin-left: 2%;
 }
 .round-indicator{
     font-size: 2em;
@@ -29,12 +40,7 @@
     color: rgba(255,255,255,0.8);
     font-family: 'Roboto', sans-serif;
 }
-.game-question{
-    line-height: 3;
-}
-.game-question p{
-    font-size: 2em;
-}
+
 .album-hint{
     width:200px;
     height:200px;
