@@ -1,3 +1,13 @@
+.go-back{
+    position: absolute;
+}
+.go-back button{
+    margin-top: 5px;
+    margin-left: 5px;
+    border: none;
+    outline:none;
+    background-color: transparent;
+}
 .game-container{
     background-color: #FDFDFD;
     color: #484848;
