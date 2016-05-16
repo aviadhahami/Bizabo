@@ -115,6 +115,9 @@ angular.module('bizzaboApp')
 						exposeAlbumToScope(attempt);
 					}
 				}
+
+				// Both ways - clean input
+				cleanInput();
 			};
 
 			$scope.guess = function(){

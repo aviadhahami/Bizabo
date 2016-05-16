@@ -20,12 +20,13 @@
     box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.5);
     background-color: #00b3ee;
     margin: 3% auto auto;
-    line-height: 3;
+    line-height: 2;
 }
 .game-question p{
     font-size: 2em;
     color: #FFF;
     margin-left: 2%;
+    padding-top: 3%;
 }
 .round-indicator{
     font-size: 2em;
