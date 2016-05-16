@@ -21,6 +21,12 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
+.question-loading{
+    font-size: 3em;
+    font-weight: 100;
+    color: rgba(255,255,255,0.8);
+    font-family: 'Roboto', sans-serif;
+}
 .game-question p{
     font-size: 2em;
 }

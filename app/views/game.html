@@ -7,15 +7,15 @@
     <div class="row" style="background-color: #4cae4c">
         <div class="col-md-5 pane">
             <div class="round-indicator">
-                <p>Round {{round}}:</p>
+                <p>Round #{{round}}</p>
             </div>
             <div class="game-questions" ng-if="albums.length>0">
                 <div class="game-question" ng-repeat="album in albums track by $index">
                     <p ng-bind="album.collectionName"></p>
                 </div>
             </div>
-            <div ng-if="!(albums.length>0)">
-                loading..
+            <div class="question-loading" ng-if="!(albums.length>0)">
+                <i class="fa fa-spinner fa-spin fa-4x" aria-hidden="true"></i>
             </div>
         </div>
         <div class="col-md-7 pane" style="background-color: #8a4182">
