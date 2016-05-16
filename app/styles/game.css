@@ -41,17 +41,51 @@
     color: rgba(255,255,255,0.8);
     font-family: 'Roboto', sans-serif;
 }
+.game-submission-container{
+    padding-top: 10%;
+}
+.submission-header{
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
 
 .album-hint{
     width:200px;
     height:200px;
 }
+.input-box{
+    /*border: 2px solid black;*/
+    width:50%;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
 .game-input{
     border:none;
+    border-bottom: 1px solid rgba(72, 72, 72, .4);
     background: transparent;
     color:white;
     outline: none;
     font-size: 2em;
+    width:80%;
+    transition: all ease .3s;
+}
+.game-input:focus, .game-input:hover{
+    border-bottom: 1px solid #484848;
+}
+.form-submit{
+    line-height: 3;
+    float: right;
+    width:20%;
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    transition: all ease .3s;
+}
+.form-submit:hover{
+    color:white;
 }
 .game-score-container{
     font-size: 3em;
